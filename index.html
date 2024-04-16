@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RockPaperScissorGame</title>
+  </head>
+  <body>
+    <div class="container hidden">
+      <div class="scoreboard">
+        <div class="title">
+          <h3>ROCK</h3>
+          <h3>PAPER</h3>
+          <h3>SCISSOR</h3>
+        </div>
+        <div class="ComVsUser">
+          <div class="comScore">
+            <h4>COMPUTER SCORE</h4>
+            <h3>0</h3>
+          </div>
+          <div class="userScore">
+            <h4>YOUR SCORE</h4>
+            <h3>0</h3>
+          </div>
+        </div>
+      </div>
+      <div class="hand-action">
+        <div class="line1"></div>
+        <div class="action">
+          <div class="actions rock" id="rock" onclick="handaction('rock')">
+            <img src="images/rock.png" alt="rock" />
+          </div>
+          <div
+            class="actions scissor"
+            id="scissors"
+            onclick="handaction('scissors')"
+          >
+            <img src="images/Scissor.png" alt="scissor" />
+          </div>
+          <div class="actions paper" id="paper" onclick="handaction('paper')">
+            <img src="images/paper.png" alt="paper" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="rule-board hidden">
+        <h1>Game Rules</h1>
+        <ul class="game-rules">
+          <li>
+            <span>
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </span>
+          </li>
+          <li>
+            <span>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </span>
+          </li>
+          <li>
+            <span>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </span>
+          </li>
+          <li>
+            <span>
+              If both players lay down the same hand, each player lays down
+              another hand
+            </span>
+          </li>
+        </ul>
+        <button class="exit-button btn-close">X</button>
+      </div>
+    </div>
+
+    <div class="game-results hidden">
+      <div class="User-Picked">
+        <div class="circle">
+          <img src="images/Ellipse 5.png" />
+        </div>
+        <h2>YOU PICKED</h2>
+        <div id="UserPicked" class="paper">
+          <img src="images/paper.png" />
+        </div>
+      </div>
+      <div class="decisions">
+        <h1 class="decision-result">YOU WIN</h1>
+        <h3>AGAINST PC</h3>
+        <button class="play-again" onclick="restart()">Play Again</button>
+      </div>
+      <div class="ComPicked">
+        <div class="circle1">
+          <img src="images/Ellipse 5.png" />
+        </div>
+        <h2>PC PICKED</h2>
+        <div class="scissor" id="PcPicked">
+          <img src="images/Scissor.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="hurray" id="Gamewin">
+      <div class="star1"><img src="images/Star 1.png" /></div>
+      <div class="star2"><img src="images/Star 2.png" /></div>
+      <div class="star3"><img src="images/Star 3.png" /></div>
+      <div class="star4"><img src="images/Star 4.png" /></div>
+      <div class="star5"><img src="images/Star 5.png" /></div>
+      <div class="star6"><img src="images/Star 6.png" /></div>
+      <div class="star7"><img src="images/Star 7.png" /></div>
+      <div class="star8"><img src="images/Star 8.png" /></div>
+      <div class="star9"><img src="images/Star 9.png" /></div>
+      <div class="cup"><img src="images/cup.png" /></div>
+      <h1>HURRAY!!</h1>
+      <h2>YOU WON THE GAME</h2>
+      <button class="play-again" onclick="restart()">Play Again</button>
+    </div>
+    <div class="footer-btn">
+      <button class="btn-rules btn-open">RULES</button>
+      <button class="btn-Next btn-nextpage" onclick="NextModal()">NEXT</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
